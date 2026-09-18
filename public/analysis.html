@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>AI Analysis | Deriv Trading Platform</title>
+
+  <link rel="stylesheet" href="/css/analysis.css" />
+
+  <script src="/config.js"></script>
+
+  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-icon">AI</span>
+      <span>Deriv AI Trading Platform</span>
+    </div>
+
+    <div class="status">
+      <span class="status-dot"></span>
+      <span>Analysis Online</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="toolbar">
+      <div class="field">
+        <label for="symbolInput">Market</label>
+        <input
+          id="symbolInput"
+          type="text"
+          value="R_100"
+          placeholder="Enter symbol"
+        />
+      </div>
+
+      <div class="field">
+        <label for="timeframeSelect">Timeframe</label>
+
+        <select id="timeframeSelect">
+          <option value="1m">1 Minute</option>
+          <option value="5m">5 Minutes</option>
+          <option value="15m">15 Minutes</option>
+          <option value="1h">1 Hour</option>
+          <option value="4h">4 Hours</option>
+        </select>
+      </div>
+
+      <button id="loadChartButton" class="primary-btn">
+        Load Chart
+      </button>
+
+      <button id="toggleIndicators" class="secondary-btn">
+        Indicators
+      </button>
+    </section>
+
+    <section class="content-grid">
+      <div class="chart-card">
+        <div class="card-header">
+          <h2>Market Chart</h2>
+          <span id="currentSymbol">R_100</span>
+        </div>
+
+        <div id="chartContainer"></div>
+      </div>
+
+      <aside
+        id="indicatorPanel"
+        class="indicator-card hidden"
+      >
+        <h2>Indicators</h2>
+
+        <label class="indicator-option">
+          <input
+            type="checkbox"
+            value="SMA"
+            checked
+          />
+          SMA
+        </label>
+
+        <label class="indicator-option">
+          <input
+            type="checkbox"
+            value="EMA"
+            checked
+          />
+          EMA
+        </label>
+
+        <label class="indicator-option">
+          <input
+            type="checkbox"
+            value="RSI"
+          />
+          RSI
+        </label>
+
+        <label class="indicator-option">
+          <input
+            type="checkbox"
+            value="MACD"
+          />
+          MACD
+        </label>
+
+        <label class="indicator-option">
+          <input
+            type="checkbox"
+            value="Bollinger"
+          />
+          Bollinger Bands
+        </label>
+
+        <label class="indicator-option">
+          <input
+            type="checkbox"
+            value="Stochastic"
+          />
+          Stochastic
+        </label>
+
+        <button
+          id="applyIndicatorsButton"
+          class="primary-btn full-width"
+        >
+          Apply Indicators
+        </button>
+      </aside>
+    </section>
+
+    <section class="summary-card">
+      <div class="card-header">
+        <h2>AI Market Summary</h2>
+        <span id="summaryStatus">Waiting for data</span>
+      </div>
+
+      <div id="analysisSummary">
+        Load a market to generate the analysis.
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/analysis.js"></script>
+</body>
+</html>
