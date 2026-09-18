@@ -1,0 +1,13 @@
+{
+  "name": "deriv-ai-trading-platform",
+  "version": "1.0.0",
+  "description": "AI-powered Deriv trading analysis platform",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
