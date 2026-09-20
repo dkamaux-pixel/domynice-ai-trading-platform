@@ -16,7 +16,7 @@ function App() {
       <header style={styles.header}>
         <div>
           <h1 style={styles.logo}>Domynice AI</h1>
-          <p style={styles.subtitle}>Deriv AI Trading Platform</p>
+          <p style={styles.subtitle}>Domynice AI Trading Platform</p>
         </div>
 
         <button style={styles.loginButton}>Connect Deriv</button>
@@ -39,11 +39,14 @@ function App() {
 
       <main style={styles.main}>
         <section style={styles.hero}>
-          <p style={styles.badge}>AI TRADING ANALYSIS</p>
-          <h2>{activeTab}</h2>
+          <p style={styles.badge}>DOMYNICE AI TRADING</p>
+
+          <h2 style={styles.heroTitle}>{activeTab}</h2>
+
           <p style={styles.description}>
-            Analyze Deriv markets, study price movements, and manage your
-            trading strategies from one platform.
+            Analyze Deriv markets, study price movements, generate AI-assisted
+            trading insights, and manage your trading strategies from one
+            platform.
           </p>
         </section>
 
@@ -69,6 +72,7 @@ function App() {
 
         <section style={styles.chart}>
           <h3>Market Chart</h3>
+
           <div style={styles.chartArea}>
             <span>Live Deriv market data will appear here.</span>
           </div>
@@ -111,6 +115,7 @@ const styles = {
     borderRadius: "8px",
     padding: "12px 18px",
     fontWeight: "bold",
+    cursor: "pointer",
   },
 
   nav: {
@@ -128,6 +133,7 @@ const styles = {
     borderRadius: "7px",
     padding: "10px 14px",
     whiteSpace: "nowrap",
+    cursor: "pointer",
   },
 
   activeNavButton: {
@@ -155,6 +161,7 @@ const styles = {
 
   heroTitle: {
     fontSize: "40px",
+    margin: "12px 0",
   },
 
   description: {
